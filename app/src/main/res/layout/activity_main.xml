@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/play"
         android:text="PLAY"
-        android:onClick="Play"
+        android:onClick="mus_Play"
         android:layout_below="@+id/List_view_bluetooth"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
@@ -62,7 +62,7 @@
         android:id="@+id/pause"
         android:text="PAUSE"
         android:layout_below="@+id/play"
-        android:onClick="Pause"
+        android:onClick="mus_Pause"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
 
@@ -72,7 +72,7 @@
         android:id="@+id/stop"
         android:text="STOP"
         android:layout_below="@+id/pause"
-        android:onClick="Stop"
+        android:onClick="mus_Stop"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
 

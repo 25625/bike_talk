@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
             return name;
         }
 
-        public void Play(View v) {
+        public void mus_Play(View v) {
             if (player == null){
                 player = MediaPlayer.create(this,R.raw.song);
                 player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -166,26 +166,24 @@ public class MainActivity extends Activity {
             player.start();
         }
 
-        public void Pause(View v) {
+        public void mus_Pause(View v) {
             if(player != null) {
                 player.pause();
             }
         }
 
-        public void Stop() {
-            Rel();
+        public void mus_Stop(View v) {
+            if(player != null) {
+                player.stop();
+            }
         }
 
         private void Rel(){
             if(player != null){
+                player.stop();
                 player.release();
                 player = null;
-                Toast.makeText(this,"Media Player is Released", Toast.LENGTH_SHORT).show();
             }
-        }
-        protected void onStop() {
-            super.onStop();
-            Rel();
         }
 
         public void mic_Record(View v) {
@@ -213,22 +211,21 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "Recording Stopped", Toast.LENGTH_SHORT).show();
         }
 
-    public void Mic_Play(View v) {
+    public void mic_Play(View v) {
         try {
                 player = new MediaPlayer();
                 player.setDataSource(get_rec_file());
                 player.prepare();
                 player.start();
-                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                /*player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        recoder.stop();
-                        recoder.release();
-                        recoder = null;
+                        player.stop();
+                        player = null;
                     }
-                });
+                });*/
 
-            Toast.makeText(this, "Recording Playng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Recording Playing", Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -256,4 +253,16 @@ public class MainActivity extends Activity {
             File file = new File(voice_file, "voice_record"+".mp3");
             return file.getPath();
         }
+
+        private void Rel_mic() {
+            recoder.stop();
+            recoder.release();
+            recoder = null;
+        }
+
+    protected void onStop() {
+        super.onStop();
+        Rel();
+        Rel_mic();
+    }
 }
