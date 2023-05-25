@@ -5,41 +5,53 @@
     android:layout_height="match_parent"
     android:addStatesFromChildren="false"
     android:animationCache="true"
-    android:background="@mipmap/bgrnd">
+    android:background="@mipmap/bgrnd"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/bikeTalk_TextView"
+        android:layout_width="244dp"
         android:layout_height="wrap_content"
-        android:text="Bike Talk"
-        android:layout_centerHorizontal="true"
+        android:text="BikeTalk"
+        android:textSize="50dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:text="Enable"
+        android:textSize="30dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="171dp"
+        android:layout_height="72dp"
+        android:text="Bluetooth"
+        android:textSize="20dp" />
+
     <Button
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:onClick="mus_Play"
-        android:text="PLAY" />
+        android:text="PLAY"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:onClick="mus_Pause"
-        android:text="PAUSE" />
+        android:text="PAUSE"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:onClick="mus_Stop"
-        android:text="STOP" />
+        android:text="STOP"
+        android:textSize="20dp" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bluetooth" />
 
 </LinearLayout>
