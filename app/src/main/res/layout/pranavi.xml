@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:addStatesFromChildren="false"
+    android:animationCache="true"
+    android:background="@mipmap/bgrnd"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bikeTalk_TextView"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:text="BikeTalk"
+        android:textSize="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp"/>
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:text="Enable"
+        android:textSize="30dp"
+        android:layout_marginTop="40dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="171dp"
+        android:layout_height="72dp"
+        android:text="Bluetooth"
+        android:textSize="20dp"
+        android:layout_marginLeft="250dp"/>
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="PLAY"
+        android:textSize="20dp"
+        android:layout_marginLeft="170dp"/>
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="PAUSE"
+        android:textSize="20dp"
+        android:layout_marginLeft="170dp"/>
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="STOP"
+        android:textSize="20dp"
+        android:layout_marginLeft="170dp"/>
+
+
+</LinearLayout>
